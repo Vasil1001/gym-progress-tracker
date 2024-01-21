@@ -17,15 +17,15 @@ const Header = () => {
   const routes = [
     {
       href: '/',
-      label: 'Nutrition'
+      label: 'CVs'
     },
     {
       href: '/',
-      label: 'Weightlifting'
+      label: 'Cover Letters'
     },
     {
       href: '/',
-      label: 'Sports'
+      label: 'Job Applications'
     }
   ]
   return (
@@ -48,7 +48,7 @@ const Header = () => {
               </SheetContent>
             </Sheet>
             <Link href="/">
-              <h1 className="text-base font-bold tracking-tighter">Gym Tracker</h1>
+              <h1 className="text-base font-bold tracking-tighter">Application Tracker</h1>
             </Link>
           </div>
 
@@ -63,10 +63,6 @@ const Header = () => {
             ))}
           </nav>
           <div className="flex items-center">
-            <Button variant="ghost" size="icon" className="mr-2" aria-label="Shopping Cart">
-              <ShoppingCart className="h-6 w-6" />
-              <span className="sr-only">Shopping Cart</span>
-            </Button>
             <Button
               variant="ghost"
               size="icon"
