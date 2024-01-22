@@ -12,48 +12,44 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const data = [
   {
-    average: 35,
-    today: 30
+    average: 4,
+    today: 4
   },
   {
-    average: 30,
-    today: 35
+    average: 7,
+    today: 7
   },
   {
-    average: 32.5,
-    today: 35
+    average: 6,
+    today: 10
   },
   {
-    average: 35,
-    today: 40
+    average: 4,
+    today: 7
   },
   {
-    average: 35,
-    today: 30
+    average: 7,
+    today: 8
   },
   {
-    average: 35,
-    today: 35
+    average: 6,
+    today: 10
   },
   {
-    average: 35,
-    today: 35
+    average: 6,
+    today: 12
   },
   {
-    average: 35,
-    today: 40
+    average: 6,
+    today: 14
   },
   {
-    average: 35,
-    today: 40
+    average: 6,
+    today: 21
   },
   {
-    average: 35,
-    today: 35
-  },
-  {
-    average: 35,
-    today: 35
+    average: 6,
+    today: 27
   }
 ]
 
@@ -61,13 +57,11 @@ export function LineChartWeights() {
   return (
     <Card className="flex h-full flex-col justify-between">
       <CardHeader>
-        <CardTitle>Biceps Tracking</CardTitle>
-        <CardDescription>
-          Your exercise minutes are ahead of where you normally are.
-        </CardDescription>
+        <CardTitle>Applications Chart</CardTitle>
+        <CardDescription>Line chart with the amount of applications sent per day</CardDescription>
       </CardHeader>
-      <CardContent className="pb-4">
-        <div className="h-[200px]">
+      <CardContent className="flex-1 pb-4">
+        <div className="h-full min-h-[200px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
@@ -106,7 +100,7 @@ export function LineChartWeights() {
                 }}
               />
               <XAxis dataKey="name" />
-              <YAxis />
+              <YAxis domain={['dataMin - 4', 'dataMax + 4']} />
               <CartesianGrid opacity={0.1} strokeDasharray="4 5" />
               <Line
                 type="monotone"
